@@ -21,7 +21,6 @@ class EnterTextTest {
 
     @Test
     fun testEnterText() {
-
         val text = "test"
         // InputFragmentでテキストを入力する
         onView(withId(R.id.inputText)).perform(replaceText(text))
@@ -30,6 +29,5 @@ class EnterTextTest {
         // ResultFragmentに遷移後、テキストが正しく表示されていることを確認する
         onView(withId(R.id.resultText))
             .check(matches(withText(text)))
-
     }
 }
